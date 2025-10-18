@@ -1,5 +1,13 @@
 @import url(./base.css);
 
+.speakers .menu path {
+  fill: var(--color-primary);
+}
+
+.speakers .close path {
+  fill: var(--color-primary);
+}
+
 .speakers .main-heading {
   font-size: 98px;
 }
@@ -17,4 +25,103 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  row-gap: 100px;
+  column-gap: 100px;
+  justify-items: center;
+}
+
+.speaker-wrapper {
+  max-width: 420px;
+}
+
+.speaker-photo {
+  height: 310px;
+  width: 310px;
+  object-fit: cover;
+  margin-bottom: 36px;
+}
+
+.speaker-photo-top {
+  object-position: top;
+}
+
+.speaker-name {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.speaker-company {
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+.company-bio {
+  font-size: 20px;
+}
+
+.speaker-company,
+.company-bio {
+  color: var(--color-text-speakers);
+}
+
+@media (max-width: 1220px) {
+  .home .main-heading {
+    font-size: 70px;
+  }
+  .button {
+    font-size: 24px;
+    padding: 0 32px;
+    height: 70px;
+  }
+  .button img {
+    width: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .speaker-grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 840px) {
+  .nav {
+    background-color: var(--color-text-on-primary);
+  }
+  .body-no-scroll {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 590px) {
+  .main {
+    width: 90%;
+    padding: 0 20px;
+    margin-bottom: 100px;
+  }
+
+  .speakers .main-heading {
+    font-size: 54px;
+  }
+
+  .home .main-heading {
+    font-size: 34px;
+  }
+  .home .main-sub-heading {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+  .button-container {
+    flex-direction: column;
+    row-gap: 20px;
+    width: 70%;
+  }
+  .button {
+    font-size: 14px;
+    padding: 0 18px;
+    height: 50px;
+  }
+  .button img {
+    width: 16px;
+  }
 }
